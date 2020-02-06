@@ -11,16 +11,26 @@
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-    <header>
-        <a href="/">
-            <span>Heystac</span>
-        </a>
-        <nav>
-            <button id="mainMenuToggle">
-                <span>Main Menu</span>
+    <header class="header">
+        <div class="brand">
+            <a href="/" class="brand__link">
+                <svg class="brand__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.67 65.74">
+                    <path d="M5.55,43.72A.71.71,0,0,0,6.26,43V10.74l5.49,5.52a3.1,3.1,0,0,0,2.21.92H53.7a.71.71,0,0,1,.71.71V31.24a.7.7,0,0,0,.7.71H60a.71.71,0,0,0,.71-.71V14a3.14,3.14,0,0,0-3.13-3.15h-42a.71.71,0,0,1-.5-.21L5.34.92A3.1,3.1,0,0,0,1.93.24,3.14,3.14,0,0,0,0,3.15V43a.71.71,0,0,0,.71.71Z"/>
+                    <path d="M57.54,36.68H18.78a.71.71,0,0,1-.7-.72V29.21a.71.71,0,0,1,.7-.72H48.6a.7.7,0,0,0,.7-.71V22.85a.7.7,0,0,0-.7-.71H15a3.15,3.15,0,0,0-3.13,3.17V39.86A3.15,3.15,0,0,0,15,43H54.41V54.89L49,49.41a3.1,3.1,0,0,0-2.21-.94H.93a.71.71,0,0,0-.7.72v4.92a.71.71,0,0,0,.7.72H45.21a.71.71,0,0,1,.5.21l9.62,9.77a3.12,3.12,0,0,0,2.21.93,3.13,3.13,0,0,0,3.13-3.18V39.86A3.15,3.15,0,0,0,57.54,36.68Z"/>
+                </svg>
+                <span class="hidden-visually">Heystac</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <button id="mainMenuToggle" class="hamburger">
+                <div class="hamburger__container">
+                    <div class="hamburger__inner"></div>
+                    <div class="hamburger__hidden"></div>
+                </div>
+                <span class="hidden-visually">Main Menu</span>
             </button>
-            <div id="mainMenu" class="menu">
-                <button>
+            <div id="mainMenu" class="drawer drawer--left">
+                <button id="mainMenuClose">
                     <span>Close Menu</span>
                 </button>
                 <ul>
@@ -59,11 +69,11 @@
                 </ul>
             </div>
         </nav>
-        <button>
-            <span>Let's Talk</span>
+        <button id="letsTalkToggle" class="lets-talk"> 
+            <span class="hidden-visually">Let's Talk</span>
         </button>
-        <div>
-            <button>
+        <div id="letsTalk" class="drawer drawer--right">
+            <button id="letsTalkClose">
                 <span>Close Menu</span>
             </button>
             <form>
@@ -94,42 +104,73 @@
     </header>
     <main>
         <section>
-            <div>
-                <h1>Hey there! We’re heystac, your friendly neighborhood experience designers.</h1>
-                <p>We help your customers get where they want to go and find what they are looking for. <span>And we believe that should be you.</span></p>
+            <div class="intro">
+                <h1 class="intro__title">Hey there! We’re heystac, your friendly neighborhood experience designers.</h1>
+                <p class="intro__text">We help your customers get where they want to go and find what they are looking for. <span class="text-highlight">And we believe that should be you.</span></p>
             </div>
-            <div>
-                <ul>
-                    <li>
+            <div class="foci">
+                <ul class="foci__list">
+                    <li class="foci__item">
                         Design
                     </li>
-                    <li>
+                    <li class="foci__item">
                         Techonology
                     </li>
-                    <li>
+                    <li class="foci__item">
                         Strategy
                     </li>
                 </ul>
             </div>
         </section>
         <section>
-            <h2>Work We Love</h2>
-            <article>
-                <h3>GA  Tech</h3>
-                <p>Series A financing return on investment market. Agile development value proposition success early adopters hypotheses business-to-consumer pitch equity leverage client stealth. Entrepreneur buyer seed round marketing alpha advisor leverage focus partnership infrastructure stock vesting period investor.</p>
-                <a href="#">Learn More</a>
+            <div class="banner">
+                <div class="banner__inner">
+                    <img src="assets/img/heystac-hero.png" class="banner__img" alt="Man checking phone while working on laptop">
+                </div>
+                <div class="banner__wrapper">
+                    <h2 class="banner__title">Work We Love</h2>
+                </div>
+            </div>
+            
+            <article class="work-item">
+                <figure class="work-item__thumb">
+                    <img src="assets/img/gatech.png" class="work-item__img" alt="Georgia Tech">
+                </figure>
+                <div class="work-item__content">
+                    <h3 class="work-item__title">GA  Tech</h3>
+                    <div class="work-item__desc">
+                        <p>Series A financing return on investment market. Agile development value proposition success early adopters hypotheses business-to-consumer pitch equity leverage client stealth. Entrepreneur buyer seed round marketing alpha advisor leverage focus partnership infrastructure stock vesting period investor.</p>
+                        <a href="#" class="button button--outlined">Learn More</a>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h3>NCR</h3>
-                <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
-                <a href="#">Learn More</a>
+            <div class="thumb">
+                <img src="assets/img/heystac-atlanta.png" class="thumb__img" alt="">
+            </div>
+            <article class="work-item">
+                <figure class="work-item__thumb">
+                    <img src="assets/img/ncr.png" class="work-item__img" alt="">
+                </figure>
+                <div class="work-item__content">
+                    <h3 class="work-item__title">NCR</h3>
+                    <div class="work-item__desc">
+                        <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
+                        <a href="#" class="button button--outlined">Learn More</a>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h3>Sysco</h3>
-                <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
-                <a href="#">Learn More</a>
-            </article>
-           
+            <article class="work-item">
+                <figure class="work-item__thumb">
+                    <img src="assets/img/sysco.png" class="work-item__img" alt="">
+                </figure>
+                <div class="work-item__content">
+                    <h3 class="work-item__title">Sysco</h3>
+                    <div class="work-item__desc">
+                        <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
+                        <a href="#" class="button button--outlined">Learn More</a>
+                    </div>
+                </div>
+            </article>           
         </section>
         <section>
             <h2>Clients we love</h2>

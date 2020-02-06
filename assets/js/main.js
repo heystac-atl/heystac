@@ -1,18 +1,27 @@
 // Main Menu Toggle
-(function() {
+let menuToggle = document.querySelector('#mainMenuToggle'),
+    menuClose = document.querySelector('#mainMenuClose'),
+    menu = document.querySelector('#mainMenu');
 
-	var hamburger = {
-		mainMenuToggle: document.getElementById('mainMenuToggle'),
-		mainMenu: document.getElementById('mainMenu'),
+menuToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    menu.classList.add('is-open');
+});
+menuClose.addEventListener('click', function(e) {
+    e.preventDefault();
+    menu.classList.remove('is-open');
+});
 
-		doToggle: function(e) {
-			e.preventDefault();
-			this.mainMenuToggle.classList.toggle('is-open');
-			this.mainMenu.classList.toggle('is-open');
-		}
-	};
+// Let's Talk Form Toggle
+let formToggle = document.querySelector('#letsTalkToggle'),
+    formClose = document.querySelector('#letsTalkClose'),
+    form = document.querySelector('#letsTalk');
 
-	hamburger.mainMenuToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
-	hamburger.mainMenu.addEventListener('click', function(e) { hamburger.doToggle(e); });
-
-}());
+formToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    form.classList.add('is-open');
+});
+formClose.addEventListener('click', function(e) {
+    e.preventDefault();
+    form.classList.remove('is-open');
+});
