@@ -162,7 +162,8 @@ h1 {
 .drawer {
     
     transition: left 0.5s ease;
-    background: black;
+    background: rgb(228,47,115);
+    background: linear-gradient(135deg, rgba(228,47,115,1) 0%, rgba(255,102,0,1) 100%);
     color: white;
     font-size: 2rem;
     height: 100vh;
@@ -171,7 +172,7 @@ h1 {
     top: 0;
     width: 100%;
     max-width: 720px;
-    z-index: 1;
+    z-index: 11;
 }
 
 .drawer--left {
@@ -396,4 +397,8 @@ h1 {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
