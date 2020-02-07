@@ -23,7 +23,13 @@ h1 {
 }
 
 .header .lets-talk {
-  display: none;  
+  position: fixed;
+  bottom: 3rem; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  margin: 0 auto;
+  color: #fff;
+  z-index: 10;
 }
 
 .header .hamburger {
@@ -66,6 +72,7 @@ h1 {
   width: 24px;
   height: 16px;
   position: relative;
+  cursor: pointer;
 }
 .hamburger:hover .hamburger__inner {
   transform: translate(-51px, 50%);
@@ -81,7 +88,7 @@ h1 {
 .hamburger__inner {
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform, opacity;
@@ -94,7 +101,7 @@ h1 {
 .hamburger__inner::before, .hamburger__inner::after {
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform, opacity;
@@ -122,7 +129,7 @@ h1 {
   opacity: 0;
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform, opacity;
@@ -135,7 +142,7 @@ h1 {
 .hamburger__hidden::before, .hamburger__hidden::after {
   width: 100%;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   transition-property: transform, opacity;
@@ -285,6 +292,16 @@ h1 {
   background-color: #272126;
 }
 
+.work-item--alt {
+  background: rgb(228,47,115);
+  background: linear-gradient(0deg, rgba(228,47,115,1) 0%, rgba(255,102,0,1) 100%);
+}
+
+.work-item--alt .button {
+  border-color: #fff; 
+  color: #fff; 
+}
+
 .work-item__thumb {
   overflow: hidden;
   max-width: 600px;
@@ -295,6 +312,10 @@ h1 {
   width: 100%; 
   display: block;
   width:177.777%;
+}
+
+.work-item__img--left {
+  margin:0 -38.885%;
 }
 
 .work-item__content {
@@ -319,6 +340,44 @@ h1 {
   width:139.777%;
   mix-blend-mode: multiply;
   opacity: .4;
+}
+
+.clients {
+  background: rgb(228,47,115);
+  background: linear-gradient(0deg, rgba(228,47,115,1) 0%, rgba(255,102,0,1) 100%);
+  padding: 2rem 1rem; 
+}
+
+.clients__wrapper {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;
+  min-width: 100%;
+  margin-left: -1rem; 
+  margin-right: -1rem;  
+}
+
+.clients__item {
+  flex: 1 1 50%; 
+  max-width: 50%; 
+  text-align: center;
+  padding: 1rem; 
+}
+
+.clients__item--hidden {
+  display: none; 
+}
+
+.clients__quotes {
+ flex: 1 1 100%; 
+ width: 100%; 
+ padding: 2rem 0; 
+ text-align: center;
+}
+
+.footer {
+  padding: 2rem 0;
+  text-align: center; 
 }
 
 .text-highlight {
