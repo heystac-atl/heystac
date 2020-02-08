@@ -33,35 +33,35 @@
                 <button id="mainMenuClose">
                     <span>Close Menu</span>
                 </button>
-                <ul>
-                    <li>
-                        <a href="#">Work</a>
+                <ul class="menu menu--main">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Work</a>
                     </li>
-                    <li>
-                        <a href="#">Philosophy</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Philosophy</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
+                    <li class="menu__item">
+                        <a hclass="menu__link" ref="#">Services</a>
                     </li>
-                    <li>
-                        <a href="#">Blog</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Blog</a>
                     </li>
-                    <li>
-                        <a href="#">Contact</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Contact</a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
+                <ul class="menu menu--social">
+                    <li class="menu__item">
                         <a href="#">
                             <span>Instagram</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="menu__item">
                         <a href="#">
                             <span>LinkedIn</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="menu__item">
                         <a href="#">
                             <span>Twitter</span>
                         </a>
@@ -70,35 +70,74 @@
             </div>
         </nav>
         <button id="letsTalkToggle" class="lets-talk"> 
-            <span>Let's Talk</span>
+            <span class="lets-talk__label">Let's Talk</span>
+            <svg class="lets-talk__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53 70">
+                <defs>
+                    <style>
+                        .speech-bubble__shape {
+                            fill-rule:evenodd;
+                            fill:url(#linear-gradient);
+                        }
+                        .speech-bubble__dot {
+                            fill:#fff;
+                        }
+                    </style>
+                    <filter xmlns="http://www.w3.org/2000/svg" id="dropshadow" height="130%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
+                        <feOffset dx="2" dy="2" result="offsetblur"/>
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.2"/>
+                        </feComponentTransfer>
+                        <feMerge> 
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/> 
+                        </feMerge>
+                    </filter>
+                    <linearGradient id="linear-gradient" x1="-167.62" y1="231.87" x2="-167.6" y2="230.26" gradientTransform="matrix(53, 0, 0, -70, 8909.59, 16188.47)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#f26722"/>
+                        <stop offset="1" stop-color="#e43074"/>
+                    </linearGradient>
+                </defs>
+                <g class="speech-bubble" filter="url(#dropshadow)">
+                     <path class="speech-bubble__shape" d="M53,70,36.33,53.25H0V0H53Z"/>
+                     <g class="speech-bubble__dots">
+                        <rect class="speech-bubble__dot" x="13" y="25" width="6.32" height="6"/>
+                        <rect class="speech-bubble__dot" x="32.68" y="25" width="6.32" height="6"/>
+                        <rect class="speech-bubble__dot" x="22.84" y="25" width="6.32" height="6"/>
+                    </g>
+                </g>
+            </svg>
         </button>
         <div id="letsTalk" class="drawer drawer--right">
             <button id="letsTalkClose">
                 <span>Close Menu</span>
             </button>
-            <form>
-                <div>
-                    <label for="letsTalkNameaumZVS">Name</label>
-                    <input type="text" id="letsTalkNameaumZVS" name="letsTalkNameaumZVS">
+            <form class="form" id="letsTalkForm">
+                <div class="form__group">
+                    <label class="label" for="letsTalkNameaumZVS">Name</label>
+                    <input class="input input--inverse" type="text" id="letsTalkNameaumZVS" name="letsTalkNameaumZVS">
                 </div>
-                <div>
-                    <label for="letsTalkEmailqIt9zR">Email</label>
-                    <input type="email" id="letsTalkEmailqIt9zR" name="letsTalkEmailqIt9zR">
+                <div class="form__group">
+                    <label class="label" for="letsTalkEmailqIt9zR">Email</label>
+                    <input class="input input--inverse" type="email" id="letsTalkEmailqIt9zR" name="letsTalkEmailqIt9zR">
                 </div>
-                <div>
-                    <label for="letsTalkPhone9r5sqR">Phone</label>
-                    <input type="tel" id="letsTalkPhone9r5sqR" name="letsTalkPhone9r5sqR">
+                <div class="form__group">
+                    <label class="label"  for="letsTalkPhone9r5sqR">Phone</label>
+                    <input class="input input--inverse" type="tel" id="letsTalkPhone9r5sqR" name="letsTalkPhone9r5sqR">
                 </div>
-                <div>
-                    <label for="letsTalkMessageaPQUXi">Message</label>
-                    <textarea id="letsTalkMessageaPQUXi" name="letsTalkMessageaPQUXi" rows="10" ></textarea>
+                <div class="form__group">
+                    <label class="label" for="letsTalkMessageaPQUXi">Message</label>
+                    <textarea class="textarea textarea--inverse" id="letsTalkMessageaPQUXi" name="letsTalkMessageaPQUXi" rows="10" ></textarea>
                 </div>
-                <div>
+                <div class="form__group c3b806aa">
                     <!-- Honey Pot -->
                     <label class="ohnohoney" for="name"></label>
                     <input class="ohnohoney" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
                 </div>
-                <input type="submit" value="Say Hey!">
+                <div class="form__group text-right">
+                    <input type="submit" class="button button--inverse" value="Say Hey!">
+                </div>
+                
             </form>
         </div>
     </header>

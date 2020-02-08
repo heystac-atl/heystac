@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53 70">
+    <defs>
+        <style>
+            .speech-bubble__shape {
+                fill-rule:evenodd;
+                fill:url(#linear-gradient);
+            }
+            .speech-bubble__dot {
+                fill:#fff;
+            }
+        </style>
+        <linearGradient id="linear-gradient" x1="-167.62" y1="231.87" x2="-167.6" y2="230.26" gradientTransform="matrix(53, 0, 0, -70, 8909.59, 16188.47)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f26722"/>
+            <stop offset="1" stop-color="#e43074"/>
+        </linearGradient>
+    </defs>
+    <g class="speech-bubble">
+        <g class="speech-bubble__dots">
+            <rect class="speech-bubble__dot" x="13" y="25" width="6.32" height="6"/>
+            <rect class="speech-bubble__dot" x="32.68" y="25" width="6.32" height="6"/>
+            <rect class="speech-bubble__dot" x="22.84" y="25" width="6.32" height="6"/>
+        </g>
+         <path class="speech-bubble__shape" d="M53,70,36.33,53.25H0V0H53Z"/>
+    </g>
+</svg>
