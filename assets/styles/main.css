@@ -30,6 +30,12 @@ h1 {
   margin: 0 auto;
   color: #fff;
   z-index: 10;
+  transition: all 500ms ease-in-out; 
+}
+
+.header .lets-talk.is-hidden {
+  opacity: 0; 
+  visibility: hidden; 
 }
 
 .header .hamburger {
@@ -50,6 +56,8 @@ h1 {
   align-items: center; 
   justify-content: center;
   background-color: #E42F73; 
+  position: relative; 
+  z-index: 12; 
 }
 
 .brand__logo {
@@ -179,19 +187,22 @@ h1 {
 }
 
 .drawer {
-    
     transition: left 0.5s ease;
     background: rgb(228,47,115);
     background: linear-gradient(135deg, rgba(228,47,115,1) 0%, rgba(255,102,0,1) 100%);
     color: white;
     font-size: 2rem;
     height: 100vh;
-    padding: 2rem;
+    padding: 3.25rem 1.5rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
     max-width: 720px;
     z-index: 11;
+}
+
+.drawer.is-open {
+  overflow-y: auto;
 }
 
 .drawer--left {
@@ -212,10 +223,15 @@ h1 {
   -moz-transition: right 0.5s ease;
   -ms-transition: right 0.5s ease;
   -o-transition: right 0.5s ease;
+  z-index: 15;
 }
 
 .drawer--right.is-open {
   right: 0px;
+}
+
+.drawer__header {
+  margin-bottom: 2rem; 
 }
 
 .button {
@@ -265,6 +281,10 @@ h1 {
   width: 100%; 
 }
 
+.form--lets-talk {
+ padding-right: 2rem; 
+}
+
 .form__group {
   flex: 0 1 100%; 
   max-width: 100%; 
@@ -298,6 +318,146 @@ h1 {
 	position: absolute;
 	width: 1px;
   white-space: nowrap;   
+}
+
+
+.close {
+  position: relative; 
+  width: 24px; 
+  height: 24px; 
+  padding: 1rem; 
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
+.close__bar1 {
+  height: 2px;
+  width: 24px;
+  background: #Fff;
+  position: absolute;
+  -webkit-transition: background .3s ease;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.close__bar2{
+	height: 2px;
+	width: 24px;
+	border-radius: 3px;
+	background: #FFF;
+	position: absolute;
+	-webkit-transition: background .3s ease;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.close:hover .close__bar1{
+	-webkit-animation: hover-close-1 .3s ease;
+	background: #555;
+	-webkit-transition: background .3s ease;
+}
+
+.close:hover .close__bar2{
+	-webkit-animation: hover-close-2 .3s ease;
+	background: #555;
+	-webkit-transition: background .3s ease;
+}
+
+@-webkit-keyframes hover-close-1 {
+  0% {
+    -webkit-transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+
+@-webkit-keyframes hover-close-2 {
+  0% {
+    -webkit-transform: rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+
+.menu--main {
+  text-align: right;
+  padding-right: 2rem;
+  opacity: 0;  
+}
+
+.menu--main .menu__item +  .menu__item  {
+  margin-top:  1rem;
+}
+
+
+.menu--main.is-visible {
+  opacity: 1; 
+  transition: opacity 1000ms ease; 
+}
+
+.menu--main .menu__link:after {
+  content: '';
+  position: absolute; 
+  bottom: -.5rem; 
+  right:  0;  
+  width: 0; 
+  height: 2px; 
+  background-color: #fff; 
+  transition: width 350ms ease-in-out; 
+}
+
+.menu--main .menu__link:hover:after,
+.menu--main .menu__link:focus:after
+ {
+  width: 100%;
+}
+
+.menu--social {
+  display:  flex;
+  align-items: center;
+  justify-content:  flex-end; 
+  width: 100%;
+  margin-top: 3rem;
+  padding-right: 2rem;
+  opacity: 0;
+}
+
+.menu--social.is-visible {
+  opacity: 1; 
+  transition: opacity 1000ms ease; 
+}
+
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  position:  relative; 
+}
+
+.menu__icon {
+  width: 1.25rem; 
+}
+
+.menu__icon path {
+  fill: #fff; 
+}
+
+.menu--social .menu__item + .menu__item {
+  margin-left: 2rem; 
 }
 
 .container {
