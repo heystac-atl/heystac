@@ -164,69 +164,106 @@
                 <h1 class="intro__title">Hey there! We’re heystac, your friendly neighborhood experience designers.</h1>
                 <p class="intro__text">We help your customers get where they want to go and find what they are looking for. <span class="text-highlight">And we believe that should be you.</span></p>
             </div>
-            <div class="foci">
-                <ul class="foci__list">
-                    <li class="foci__item">
-                        Design
+            <div class="foci" data-tab-component>
+                <ul class="tab__list" role="tablist" aria-label="Tabbed content">
+                    <li class="tab__item" role="presentation">
+                        <button class="tab__control" role="tab" aria-selected="false"  aria-controls="tab1-content"  id="tab1">
+                            <img class="tab__icon" src="assets/img/icon-design.png" alt="" role="presentation"/>
+                            <span class="tab__label">Design</span>
+                        </button>
                     </li>
-                    <li class="foci__item">
-                        Techonology
+                    <li class="tab__item" role="presentation">
+                        <button class="tab__control" role="tab" aria-selected="false"  aria-controls="tab2-content"  id="tab2">
+                            <img class="tab__icon" src="assets/img/icon-tech.png" alt="" role="presentation"/>
+                            <span class="tab__label">Technology</span>
+                        </button>
                     </li>
-                    <li class="foci__item">
-                        Strategy
+                    <li class="tab__item" role="presentation">
+                        <button class="tab__control" role="tab" aria-selected="false"  aria-controls="tab3-content"  id="tab3">
+                            <img class="tab__icon" src="assets/img/icon-strategy.png" alt="" role="presentation"/>
+                            <span class="tab__label">Strategy</span>
+                        </button>
                     </li>
                 </ul>
+                <div class="foci__content">
+                    <section id="tab1-content" role="tabpanel" aria-labelledby="tab1" tabindex="0" aria-hidden="true">
+                        <h3>Tab One</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu turpis, varius quis mauris sit amet, fringilla commodo eros. Vivamus nec elit justo. Quisque faucibus auctor libero at laoreet. Mauris tempor, eros id molestie tempor, ex nibh porttitor ex, quis tempor odio ipsum nec dolor. Sed at fringilla mi. Proin sed nisi laoreet nisl mollis placerat. Nulla nisl magna, varius eu scelerisque a, euismod a magna. Proin quis fringilla nisl. Phasellus convallis varius nibh sed fringilla.</p>
+                    </section>
+                    <section id="tab2-content" role="tabpanel" aria-labelledby="tab2" tabindex="0" aria-hidden="true">
+                        <h3>Tab Two</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu turpis, varius quis mauris sit amet, fringilla commodo eros. Vivamus nec elit justo. Quisque faucibus auctor libero at laoreet. Mauris tempor, eros id molestie tempor, ex nibh porttitor ex, quis tempor odio ipsum nec dolor. Sed at fringilla mi. Proin sed nisi laoreet nisl mollis placerat. Nulla nisl magna, varius eu scelerisque a, euismod a magna. Proin quis fringilla nisl. Phasellus convallis varius nibh sed fringilla.</p>
+                    </section>
+                    <section id="tab3-content" role="tabpanel" aria-labelledby="tab3" tabindex="0" aria-hidden="true">
+                        <h3>Tab Three</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu turpis, varius quis mauris sit amet, fringilla commodo eros. Vivamus nec elit justo. Quisque faucibus auctor libero at laoreet. Mauris tempor, eros id molestie tempor, ex nibh porttitor ex, quis tempor odio ipsum nec dolor. Sed at fringilla mi. Proin sed nisi laoreet nisl mollis placerat. Nulla nisl magna, varius eu scelerisque a, euismod a magna. Proin quis fringilla nisl. Phasellus convallis varius nibh sed fringilla.</p>
+                    </section>
+                </div>
             </div>
         </section>
-        <section>
-            <div class="banner">
-                <div class="banner__inner">
-                    <img src="assets/img/heystac-hero.png" class="banner__img" alt="Man checking phone while working on laptop">
-                </div>
-                <div class="banner__wrapper">
-                    <h2 class="banner__title">Work We Love</h2>
+        <div class="grid">
+            <div class="grid__cell grid__cell--hero">
+                <div class="banner">
+                    <picture  class="banner__inner">
+                        <source srcset="assets/img/heystac-hero.png" media="(min-width: 620px)">
+                        <img class="banner__img"  src="assets/img/heystac-hero--small.png" alt="Man checking phone while working on laptop" />
+                    </picture>
+                    <div class="banner__wrapper">
+                        <h2 class="banner__title">Work We Love</h2>
+                    </div>
                 </div>
             </div>
-            <article class="work-item">
-                <figure class="work-item__thumb">
-                    <img src="assets/img/gatech.png" class="work-item__img" alt="Georgia Tech">
-                </figure>
-                <div class="work-item__content">
-                    <h3 class="work-item__title">GA  Tech</h3>
-                    <div class="work-item__desc">
-                        <p>Series A financing return on investment market. Agile development value proposition success early adopters hypotheses business-to-consumer pitch equity leverage client stealth. Entrepreneur buyer seed round marketing alpha advisor leverage focus partnership infrastructure stock vesting period investor.</p>
-                        <a href="#" class="button button--outlined">Learn More</a>
+            <div class="grid__cell grid__cell--1">
+                <article class="work-item">
+                    <figure class="work-item__thumb">
+                        <img src="assets/img/gatech.png" class="work-item__img" alt="Georgia Tech">
+                    </figure>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title">GA  Tech</h3>
+                        <div class="work-item__desc">
+                            <p>Series A financing return on investment market. Agile development value proposition success early adopters hypotheses business-to-consumer pitch equity leverage client stealth. Entrepreneur buyer seed round marketing alpha advisor leverage focus partnership infrastructure stock vesting period investor.</p>
+                            <a href="#" class="button button--outlined">Learn More</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <div class="thumb">
-                <img src="assets/img/heystac-atlanta.png" class="thumb__img" alt="">
+                </article>
             </div>
-            <article class="work-item">
-                <figure class="work-item__thumb">
-                    <img src="assets/img/ncr.png" class="work-item__img" alt="">
-                </figure>
-                <div class="work-item__content">
-                    <h3 class="work-item__title">NCR</h3>
-                    <div class="work-item__desc">
-                        <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
-                        <a href="#" class="button button--outlined">Learn More</a>
+            <div class="grid__cell grid__cell--cta">
+
+            </div>
+            <div class="grid__cell grid__cell--2">
+                <article class="work-item">
+                    <figure class="work-item__thumb">
+                        <img src="assets/img/ncr.png" class="work-item__img" alt="">
+                    </figure>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title">NCR</h3>
+                        <div class="work-item__desc">
+                            <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
+                            <a href="#" class="button button--outlined">Learn More</a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="work-item work-item--alt">
-                <figure class="work-item__thumb">
-                    <img src="assets/img/sysco.jpg" class="work-item__img work-item__img--left" alt="">
-                </figure>
-                <div class="work-item__content">
-                    <h3 class="work-item__title">Sysco</h3>
-                    <div class="work-item__desc">
-                        <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
-                        <a href="#" class="button button--outlined">Learn More</a>
+                </article>
+            </div>
+            <div class="grid__cell grid__cell--3">
+                <article class="work-item work-item--alt">
+                    <figure class="work-item__thumb">
+                        <img src="assets/img/sysco.jpg" class="work-item__img work-item__img--left" alt="">
+                    </figure>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title">Sysco</h3>
+                        <div class="work-item__desc">
+                            <p>Interaction design founders success startup venture research & development business model canvas early adopters influencer. IPad crowdsource partnership crowdfunding rockstar.</p>
+                            <a href="#" class="button button--outlined">Learn More</a>
+                        </div>
                     </div>
+                </article>     
+            </div>
+            <div class="grid__cell grid__cell--dec">
+                <div class="thumb">
+                    <img src="assets/img/heystac-atlanta.png" class="thumb__img" alt="">
                 </div>
-            </article>           
-        </section>
+            </div>
+        </div>
         <section>
             <div class="banner">
                 <div class="banner__inner">

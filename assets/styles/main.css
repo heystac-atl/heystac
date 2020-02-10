@@ -329,6 +329,9 @@ h1 {
   display: flex;
   justify-content: center;
   margin-left: auto;
+  background-color: transparent;  
+  border: 0; 
+  -webkit-appearance: none;
 }
 .close__bar1 {
   height: 2px;
@@ -493,16 +496,9 @@ h1 {
   text-align: center;
 }
 
-.banner__inner {
-  overflow: hidden;
-  max-width: 600px;
-}
-
 .banner__img {
   width: 100%; 
   display: block;
-  margin:0 -38.885%;
-  width:177.777%;
 }
 
 .banner__wrapper {
@@ -551,15 +547,12 @@ h1 {
 }
 
 .work-item__thumb {
-  overflow: hidden;
-  max-width: 600px;
   margin: 0; 
 }
 
 .work-item__img {
   width: 100%; 
   display: block;
-  width:177.777%;
 }
 
 .work-item__img--left {
@@ -623,10 +616,145 @@ h1 {
  text-align: center;
 }
 
+[data-tab-component] [role="tabpanel"][aria-hidden="true"] {
+  display: none;
+}
+
+.tab__list {
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
+}
+
+.tab__item + .tab__item {
+  margin-top: 1rem; 
+}
+
+.tab__control{
+  display: flex; 
+  align-items: center; 
+  color:  #fff;
+  background-color: transparent;  
+  border: 0; 
+  -webkit-appearance: none;
+}
+
+.tab__icon {
+  width: 3rem; 
+}
+
+.tab__label{
+  margin-left: 1rem; 
+}
+
+
 .footer {
   padding: 2rem 0;
   text-align: center; 
 }
+
+
+
+
+
+
+
+
+
+.grid-container * { 
+  border: 1px solid red;
+  position: relative;
+ }
+ 
+ .grid-container *:after { 
+  content:attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+ }
+ 
+ .grid-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+ }
+ 
+ .Hero { grid-area: 1 / 3 / 4 / 9; }
+ 
+ .GAtech { grid-area: 4 / 6 / 10 / 9; }
+ 
+ .Love { grid-area: 4 / 3 / 7 / 6; }
+ 
+ .NCR { grid-area: 7 / 3 / 13 / 6; }
+ 
+ .Sysco { grid-area: 10 / 6 / 16 / 9; }
+ 
+ .City { grid-area: 4 / 1 / 7 / 3; }
+ 
+ 
+ @media all and (-ms-high-contrast:none) {
+   .grid-container {
+     display: -ms-grid;
+     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   }
+ 
+   .Hero {
+     -ms-grid-row: 1;
+     -ms-grid-row-span: 3;
+     -ms-grid-column: 3;
+     -ms-grid-column-span: 6;
+   }
+ 
+   .GAtech {
+     -ms-grid-row: 4;
+     -ms-grid-row-span: 6;
+     -ms-grid-column: 6;
+     -ms-grid-column-span: 3;
+   }
+ 
+   .Love {
+     -ms-grid-row: 4;
+     -ms-grid-row-span: 3;
+     -ms-grid-column: 3;
+     -ms-grid-column-span: 3;
+   }
+ 
+   .NCR {
+     -ms-grid-row: 7;
+     -ms-grid-row-span: 6;
+     -ms-grid-column: 3;
+     -ms-grid-column-span: 3;
+   }
+ 
+   .Sysco {
+     -ms-grid-row: 10;
+     -ms-grid-row-span: 6;
+     -ms-grid-column: 6;
+     -ms-grid-column-span: 3;
+   }
+ 
+   .City {
+     -ms-grid-row: 4;
+     -ms-grid-row-span: 3;
+     -ms-grid-column: 1;
+     -ms-grid-column-span: 2;
+   }
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .text-highlight {
     color: #E42F73; 
